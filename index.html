@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riyan Hadi Samudra</title>
+  <meta name="description" content="Portofolio Riyan, mahasiswa informatika dan web developer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a class="nav-logo" href="#beranda">NK<span>.</span></a>
+    <nav aria-label="Navigasi utama">
+      <a href="#proyek">Proyek</a>
+      <a href="#keahlian">Keahlian</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO: kartu identitas 3D ============ -->
+    <section class="hero-track" id="beranda">
+      <div class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Portofolio · 2026</p>
+        <h1>Halo, <em>saya</em></h1>
+        <p class="lead">
+          Mahasiswa Informatika semester 7 yang senang membangun web yang rapi,
+          cepat, dan enak dipakai. Tulis satu–dua kalimat tentang dirimu di sini.
+        </p>
+      </div>
+
+      <div class="hero-card-wrap">
+        <div class="scene" id="idScene">
+          <div class="card3d" id="idCard" role="img"
+               aria-label="Kartu identitas 3D Nama Kamu, meluncur masuk saat halaman digulir.">
+            <div class="face face-front">
+              <div class="foil"></div>
+              <div class="id-top">
+                <span class="chip"></span>
+                <span class="mono">ID · 2026</span>
+              </div>
+              <div class="avatar" aria-hidden="true">NK</div>
+              <div class="id-bottom">
+                <h2>Riyan Hadi Samudra</h2>
+                <p class="mono">Web Developer</p>
+                <p class="mono muted">Informatika · Semester 7</p>
+              </div>
+            </div>
+            <div class="face face-back">
+              <div class="foil"></div>
+              <p class="mono muted">TENTANG</p>
+              <ul class="id-list">
+                <li><span>Lokasi</span><b>Kota, Indonesia</b></li>
+                <li><span>Fokus</span><b>Frontend &amp; UI</b></li>
+                <li><span>Status</span><b>Terbuka untuk magang</b></li>
+                <li><span>Email</span><b>email@kamu.com</b></li>
+              </ul>
+              <div class="barcode" aria-hidden="true"></div>
+              <p class="mono muted center">github.com/username</p>
+            </div>
+          </div>
+        </div>
+        <div class="hint" id="scrollHint">
+          <span class="mono" id="hintText">↓ scroll untuk melempar kartu</span>
+          <a class="btn btn-primary btn-small hint-cta" id="hintCta" href="#proyek">Lihat proyek ↓</a>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- ============ PROYEK: korsel kartu 3D ============ -->
+    <section class="section" id="proyek">
+      <div class="section-head">
+        <p class="eyebrow">01 — Proyek</p>
+        <h2>Karya pilihan</h2>
+        <p class="muted">Seret untuk memutar korsel. Klik kartu depan untuk melihat detailnya.</p>
+      </div>
+
+      <div class="carousel" id="carousel" tabindex="0"
+           aria-label="Korsel proyek. Gunakan panah kiri dan kanan untuk memutar, Enter untuk membalik kartu.">
+        <div class="ring" id="ring"></div>
+      </div>
+
+      <div class="carousel-controls">
+        <button class="btn btn-round" id="prevBtn" type="button" aria-label="Proyek sebelumnya">←</button>
+        <span class="mono" id="counter" aria-live="polite">01 / 06</span>
+        <button class="btn btn-round" id="nextBtn" type="button" aria-label="Proyek berikutnya">→</button>
+      </div>
+
+      <div class="section-cta">
+        <p class="muted">Tertarik bekerja sama?</p>
+        <a class="btn btn-primary" href="#kontak">Hubungi saya</a>
+      </div>
+    </section>
+
+    <!-- ============ KEAHLIAN: kartu miring ============ -->
+    <section class="section" id="keahlian">
+      <div class="section-head">
+        <p class="eyebrow">02 — Keahlian</p>
+        <h2>Yang saya kuasai</h2>
+      </div>
+      <div class="skills" id="skills"></div>
+    </section>
+
+    <!-- ============ KONTAK ============ -->
+    <section class="section contact" id="kontak">
+      <p class="eyebrow">03 — Kontak</p>
+      <h2>Mari bekerja sama.</h2>
+      <p class="muted">Punya ide proyek, lowongan magang, atau sekadar ingin menyapa?</p>
+      <a class="btn btn-primary btn-big" href="mailto:email@kamu.com">email@kamu.com</a>
+      <div class="socials mono">
+        <a href="https://github.com/username" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/username" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://instagram.com/username" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <span>© 2026 Riyan Hadi Samudra</span>
+    <span>Dibuat dengan HTML, CSS &amp; JavaScript</span>
+  </footer>
+
+  <button class="sound-toggle btn btn-small" id="soundBtn" type="button" aria-pressed="false">🔇 Suara: mati</button>
+
+  <script type="importmap">
+  { "imports": { "three": "./vendor/three/three.module.min.js", "three/addons/": "./vendor/three/addons/" } }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
